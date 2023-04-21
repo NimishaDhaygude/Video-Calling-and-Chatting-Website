@@ -1,4 +1,42 @@
 
+h1{
+    color :rgb(122, 25, 122);
+    text-align: center;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15%;
+}
+.sender{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color :rgb(243, 135, 200);
+    text-align: center;
+    height :25vh;
+    width : 25vw;
+    border : 5px solid rgb(243, 135, 200);
+    border-style: double;
+    border-radius: 20px 0px;
+    padding : 25px;
+    background-color: rgb(122, 25, 122);
+}
+.reciever{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color :rgb(243, 135, 200);
+    text-align: center;
+    height :25vh;
+    width : 25vw;
+    border : 5px solid rgb(243, 135, 200);
+    border-style: double;
+    border-radius: 20px 0px;
+    padding : 25px;
+    background-color: rgb(122, 25, 122);
+}
 #video-call-div {
     position: absolute;
     top: 0;
@@ -52,4 +90,8 @@
 button {
     cursor: pointer;
     border-radius: 40px;
+    background-color: rgb(243, 135, 200);;
+}
+button:hover{
+    background-color: pink;
 }
