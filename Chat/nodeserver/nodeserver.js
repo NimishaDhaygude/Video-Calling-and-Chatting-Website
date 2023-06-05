@@ -1,10 +1,11 @@
+console.log('integrated nodeserver.js')
 // const { Socket } = require('socket.io')
 
 // // const { Socket } = require('socket.io')
 // Headers('Access-Control-Allow-Origin : *');
 // Headers('Access-Control-Allow-Methods : POST, GET, OPTIONS, PUT, DELETE');
 // Headers('Access-Control-Allow-Headers : Content-Type, X-Auth-Token, Origin, Authorization');
-const io = require("socket.io")('http://127.0.0.1/')
+const io = require("socket.io")(3000)
 
 const users = {}
 

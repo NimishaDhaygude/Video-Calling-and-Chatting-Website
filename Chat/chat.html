@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -20,7 +20,7 @@
     </div>
     <div class="messages">
         <form action="" id="sent-container">
-            <input id = "message-inpt" type="text">
+            <input id = "message-inpt" type="text" placeholder="Message...">
             <button id="cbtn">Send</button>
         </form>
     </div>

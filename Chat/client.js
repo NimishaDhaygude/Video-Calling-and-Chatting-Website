@@ -1,4 +1,4 @@
-console.log('integrated')
+console.log('integrated client.js')
 const socket = io('http://localhost:3000');
 
 const form = document.getElementById('sent-container');
