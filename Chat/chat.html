@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body bgcolor="plum">
+    <div class="container">
+        <img id = "logo" src="../images/logo.png" alt="Logo">
+        <h1>Welcome to Chatting stream</h1>
+    </div>
+    <div class="chatroom">
+        <div class="message-left">hey! how are you</div>
+        <div class="message-right">I am fine, what about you?</div>
+    </div>
+    <div class="messages">
+        <form action="" id="sent-container">
+            <input id = "message-inpt" type="text">
+            <button id="cbtn">Send</button>
+        </form>
+    </div>
+</body>
+</html>

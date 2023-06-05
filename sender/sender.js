@@ -104,3 +104,10 @@ function muteVideo() {
     isVideo = !isVideo
     localStream.getVideoTracks()[0].enabled = isVideo
 } 
+
+const hangUpBtn = document.querySelector(".hangup-btn");
+hangUpBtn.addEventListener("click", () => {
+    peerConn.close();
+    window.close();
+}); 
+

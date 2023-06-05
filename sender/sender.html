@@ -5,11 +5,14 @@
         <link rel="stylesheet" href="../style.css">
     </head>
     <body bgcolor="plum">
+        <div class="container">
+            <img id = "logo" src="../images/logo.png" alt="Logo">
+            <h1>Welcome to Video Calling stream</h1>
+        </div>
         <div class="x">
         <div class="central-controls">
-            <input placeholder="Enter username..."
-                    type=" text" 
-                    id="username-input" /><br><div class="buttons">
+            <input placeholder="Enter username..." type=" text" id="username-input" /><br>
+            <div class="buttons">
             <button onclick="sendUsername()">Send</button>
             <button onclick="startCall()">Start Call</button></div>
         </div></div>
@@ -19,6 +22,7 @@
             <div class="call-action-div">
                 <button onclick="muteVideo()">Mute Video</button>
                 <button onclick="muteAudio()">Mute Audio</button>
+                <button class = "hangup-btn" onclick="">End</button>
             </div>
         </div>
         <script src="./sender.js"></script>

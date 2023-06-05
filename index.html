@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Calling main</title>
+    <title>Video Calling</title>
     <link rel="stylesheet" href=" style.css">
 </head>
-<body bgcolor="plum"><h1>Welcome to Video Calling stream</h1>
+<body bgcolor="plum"><div class="container">
+    <img id = "logo" src="./images/logo.png" alt="Logo">
+    <h1>Welcome to Video Calling stream</h1>
+</div>
     <div class="main">
         <div class="sender"> START a CALL <br><button onclick=" window.open('./sender/sender.html', '_blank')">start</button> </div>
         <div class="reciever">JOIN a CALL <br><button onclick=" window.open('./receiver/receiver.html', '_blank')">join</button> </div>
+        <div class="chat">JOIN a CHAT <br><button onclick=" window.open('./chat/chat.html', '_blank')">join</button> </div>
     </div>
 </body>
 </html>
