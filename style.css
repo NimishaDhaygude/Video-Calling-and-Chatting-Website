@@ -128,6 +128,7 @@ button:hover{
     overflow-y: auto;
 }
 .message{
+    font-family: 'Edu SA Beginner';
     float : left;
     clear: both;
     margin: 10px;
@@ -145,6 +146,11 @@ button:hover{
 .left{
     float: left;
     clear: both;
+}
+.joined-left{
+    text-align: center;
+    clear: both;
+    font-family: 'Edu SA Beginner';
 }
 .messages{
     display: block;

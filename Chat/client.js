@@ -10,7 +10,7 @@ const uname = prompt('Enter your name');
 socket.emit('new-user-joined', uname);
 console.log(uname)
 
-const append = (message , position) =>{
+const append_message = (message , position) =>{
     const messageElement = document.createElement('div'); 
     messageElement.innerText = message;
     messageElement.classList.add('message');
@@ -21,23 +21,30 @@ const append = (message , position) =>{
     }
 }
 
+append_joinedleft = (message) => {
+    const messageElement = document.createElement('div');
+    messageElement.innerText = message;
+    messageElement.classList.add('joined-left');
+    messageContainer.append(messageElement);
+}
+
 socket.on('user-joined',uname =>{
-    append(`${uname} joined the chat `, 'right')
+    append_joinedleft(`${uname} joined the chat `)
 })
 
 socket.on('receive',data =>{
-    append(`${data.uname}: ${data.message} `, 'left')
+    append_message(`${data.uname}: ${data.message} `, 'left')
 })
 
 socket.on('left',uname =>{
-    append(`${uname}: left the chat`, 'left')
+    append_joinedleft(`${uname}: left the chat`)
 })
 
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const message = messageInput.value;
-    append(`you: ${message}`, 'right');
+    append_message(`you: ${message}`, 'right');
     socket.emit('send',message);
     messageInput.value = '';
 })
