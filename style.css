@@ -16,7 +16,7 @@ h1{
     justify-content: space-around;
     margin-top: 15%;
 }
-.sender{
+.interface-src{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -30,34 +30,7 @@ h1{
     padding : 25px;
     background-color: rgb(122, 25, 122);
 }
-.reciever{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color :rgb(243, 135, 200);
-    text-align: center;
-    height :25vh;
-    width : 25vw;
-    border : 5px solid rgb(243, 135, 200);
-    border-style: double;
-    border-radius: 20px 0px;
-    padding : 25px;
-    background-color: rgb(122, 25, 122);
-}
-.chat{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color :rgb(243, 135, 200);
-    text-align: center;
-    height :25vh;
-    width : 25vw;
-    border : 5px solid rgb(243, 135, 200);
-    border-style: double;
-    border-radius: 20px 0px;
-    padding : 25px;
-    background-color: rgb(122, 25, 122);
-}
+
 #video-call-div {
     position: absolute;
     top: 0;
@@ -129,8 +102,6 @@ button:hover{
 }
 .message{
     font-family: 'Edu SA Beginner';
-    float : left;
-    clear: both;
     margin: 10px;
     padding: 5px;
     border-radius: 8px 8px 8px 0;
