@@ -127,7 +127,7 @@ button:hover{
     margin: auto;
     overflow-y: auto;
 }
-.message-left{
+.message{
     float : left;
     clear: both;
     margin: 10px;
@@ -138,16 +138,13 @@ button:hover{
     background-color: rgb(243, 135, 200);
     border : 2px solid black;
 }
-.message-right{
+.right{
     float: right;
     clear: both;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 8px 8px 0 8px ;
-    max-width: 80%;
-    display: inline-block;
-    background-color: rgb(243, 135, 200);
-    border : 2px solid black;
+}
+.left{
+    float: left;
+    clear: both;
 }
 .messages{
     display: block;

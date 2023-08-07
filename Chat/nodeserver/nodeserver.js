@@ -1,26 +1,48 @@
 console.log('integrated nodeserver.js')
-// const { Socket } = require('socket.io')
 
-// // const { Socket } = require('socket.io')
-// Headers('Access-Control-Allow-Origin : *');
-// Headers('Access-Control-Allow-Methods : POST, GET, OPTIONS, PUT, DELETE');
-// Headers('Access-Control-Allow-Headers : Content-Type, X-Auth-Token, Origin, Authorization');
-const io = require("socket.io")(3000)
+const io = require("socket.io")(8000)
 
-const users = {}
+// const users = {}
 
-io.on('connection',socket =>{
-    io.on('new-user-joined', uname =>{
-        console.log('new user', uname)
+// io.on('connection',socket =>{
+//     io.on('new-user-joined', uname =>{
+//         console.log('conection established....')
+//         console.log('new user', uname)
+//         users[socket.id] = uname;
+//         socket.emit.broadcast('user-joined', uname);
+//     });
+
+//     socket.on('send' , message=>{
+//         socket.emit.broadcast('recieve', {message : message, uname: users[socket.id]});
+//     });
+
+// })
+
+// io.on("connect_error", (err) => {
+//   console.log(`connect_error due to ${err.message}`);
+// });
+
+const users = {};
+
+io.on('connection', socket => {
+    socket.on('new-user-joined', uname => {
+        console.log('connection established....');
+        console.log('new user', uname);
         users[socket.id] = uname;
-        socket.emit.broadcast('user-joined', uname);
+        socket.broadcast.emit('user-joined', uname); // Broadcast the new user to other clients
     });
-
-    socket.on('send' , message=>{
-        socket.emit.broadcast('recieve', {message : message, uname: users[socket.id]});
+    
+    socket.on('send', message => {
+        socket.broadcast.emit('receive', { message: message, uname: users[socket.id] }); // Broadcast the received message to other clients
     });
-})
+    
+    socket.on('disconnect', message => {
+        socket.broadcast.emit('left',users[socket.id] ); // Broadcast the received message to other clients
+        delete users[socket.id];
+        console.log('connection terminated....');
+    });
+});
 
 io.on("connect_error", (err) => {
-  console.log(`connect_error due to ${err.message}`);
+    console.log(`connect_error due to ${err.message}`);
 });
